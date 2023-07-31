@@ -16,23 +16,79 @@ public class Starter {
 //        10. Write a Java program to remove leading zeros from a given IP address.
 //        11. Write a Java program to check for a number at the end of a string.
 //        12. Write a Java program to replace Python with Java and code with coding in a given string.
-//        13. Write a Java program to find the word Python in a given string. If the word Python appears in the string return Java otherwise return C++. Ignore case sensitive.
-        String text = "python";
-        System.out.println("Original string: "+text);
-        System.out.println("New string: "+thirteenth(text));
-        text = "JavaScript";
-        System.out.println("\nOriginal string: "+text);
-        System.out.println("New string: "+thirteenth(text));
-        text = "PYTHON";
-        System.out.println("\nOriginal string: "+text);
-        System.out.println("New string: "+thirteenth(text));
+//        13. Write a Java program to find the word Python in a given string.
+//        If the word Python appears in the string return Java otherwise return C++. Ignore case sensitive.
+//        14. Write a Java program to count the number of vowels in a given string using a regular expression.
+//        15. Write a Java program to remove all vowels from a given string. Return the updated string.
+//        16. Write a Java program to replace all vowels in a string with a specified character.
+//        17. Write a Java program to count the number of decimal places in a given number.
+//        18. Write a Java program to validate a personal identification number (PIN). Assume a PIN number is 4, 6 or 8.
+        /*19. Write a Java program to remove specific letters from a string and return the updated string.
+Specific letters: "p", "q", or "r".*/
+//        20. Write a Java program that takes a number and sets a thousand separators for that number.
+//        21. Write a Java program to remove all non-alphanumeric characters from a given string.
+//        22. Write a Java program to validate a phone number.
+//        23. Write a Java program to move all lower case letters to the front of a given word.
+//        This will keep the relative position of all the letters (both upper and lower case) same.
+//        24. Write a Java program to separate consonants and vowels from a given string.
     }
 
 
+    public static String twenty_forth(String s) {
+        return s.replaceAll("[^a-z]", "") + s.replaceAll("[^A-Z]", "");
+
+    }
+    public static String twenty_third(String s) {
+        return s.replaceAll("[^a-z]", "") + s.replaceAll("[^A-Z]", "");
+
+    }
+
+    public static boolean twenty_second(String s) {
+        return s.matches("\\+\\d{2}\\(?\\d{3}\\)? ?\\d{7}");
+
+    }
+
+    public static String twenty_first(String s) {
+        return s.replaceAll("(?i)[a-z]", "");
+
+    }
+
+    public static String twentieth(int s) {
+        return String.format("%,d", s).replaceAll("\\W", "*");
+
+    }
+
+    public static String nineteen(String s) {
+        return s.replaceAll("(?i)[pqr]", "");
+
+    }
+
+    public static boolean eighteen(String s) {
+        return s.matches("\\d{4}|\\d{6}|\\d{8}");
+    }
+
+    public static int seventeen(String s) {
+//        if (s.contains(".")) return s.replaceAll("[0-9]+[.]", "").length();
+//        return 0;
+        if (s.contains(".")) return s.replaceAll("\\d+[.]+(?=\\d+)", "").length();
+        return 0;
+
+    }
+
+    public static String sixteenth(String s, char symbol) {
+        return s.replaceAll("((?i)[aeiou])", "" + symbol);
+    }
+
+    public static String fifteenth(String s) {
+        return s.replaceAll("(?i)[aeiou]", "");
+    }
+
+    public static int fourteenth(String s) {
+        return s.toLowerCase().replaceAll("[^aeiou]", "").length();
+    }
+
     public static String thirteenth(String s) {
-
-
-        return s.replaceFirst(".*Python.*", "Java").replaceFirst("[^Java]", "C++");
+        return s.toLowerCase().replaceFirst(".*[java].*", "C++").replaceFirst(".*[python].*", "Java");
     }
 
     public static String twelfth(String s) {
